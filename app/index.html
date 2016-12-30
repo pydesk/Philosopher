@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Philosopher</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    .click i{
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      color: white;
+    }
+    .click{
+      border-style: none;
+      border-radius: 0px;
+      cursor: pointer;
+      background-color: transparent;
+    }
+    .click i:hover{
+      color: black;
+    }
+    .click:hover{
+      background-color: red;
+      transition: all 1s;
+    }
+    span{
+      font-weight: bold;
+      font-family: sans-serif;
+      color: white;
+    }
+    ul{
+      background-color: #111;
+      text-decoration: none;
+      float: left;
+      left: 0px;
+      padding: 0px;
+      color: white;
+      border-radius: 3px;
+    }
+    ul li , ul li button{
+      list-style-type: none;
+      text-decoration: none;
+      padding: 6px 8px;
+    }
+    ul li:hover , ul li button:hover{
+      background-color: #333;
+      transition: all 1s;
+    }
+    button{
+      border-style: none;
+      background-color: #111;
+      border-radius: 3px;
+      cursor: pointer;
+      color: white;
+    }
+    ul li:hover , button{
+      background-color: #111;
+    }
+    </style>
+</head>
+<!--
+<button onclick="exit()" class="click"><i class="material-icons">close</i></button>
+-->
+<body style="background-color: #444;">
+<script>
+  require('./renderer.js')
+</script>
+<script type="text/javascript">
+  function exit(){
+    /* body... */
+    window.close();
+  }
+</script>
+<br>
+<span>Link : </span><input type="input" name="input" id="input" style="width: 90%; border-style: none; border-radius: 2px;" placeholder="https://www.">
+<button onclick="call()"><i class="fa fa-search" style="font-size: 20px; width: 21px; height: 25px; text-align: center; padding: 2px;"></i></button>
+<script type="text/javascript">
+  function link1(){
+    /* body... */
+    window.open("https://www.google.com");
+  }
+  function link2(){
+    /* body... */
+    window.open("https://www.facebook.com");
+  }
+  function link3(){
+    /* body... */
+    window.open("https://www.youtube.com");
+  }
+  function call(){
+    /* body... */
+    var call = document.getElementById("input").value;
+    window.open(call);
+  }
+  function down(){
+    /* body... */
+    window.open("download.html");
+  }
+</script>
+<br>
+<ul>
+  <li><button onclick="link1()"><i class="fa fa-google"></i></button></li>
+  <li><button onclick="link2()"><i class="fa fa-facebook"></i></button></li>
+  <li><button onclick="link3()"><i class="fa fa-youtube"></i></button></li>
+  <li><button onclick="down()"><i class="fa fa-download" aria-hidden="true"></i></button></li>
+</ul>
+<br>
+</body>
+</html>

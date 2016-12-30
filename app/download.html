@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Download</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function caller(){
+		/* body... */
+		var caller = document.getElementById("input").value;
+		document.getElementById("link").href = caller;
+		document.getElementById("link").innerHTML = caller;
+	}
+</script>
+<style type="text/css">
+	body{
+		background-color: #444;
+	}
+	span{
+		color: white;
+		font-weight: bold;
+		font-family: sans-serif;
+	}
+	button{
+		background-color: #111;
+		color: white;
+		border-style: none;
+		border-radius: 2px;
+		widows: 15px;
+		font-size: 18px;
+	}
+	input{
+		border-radius: 2px;
+		border-style: none;
+	}
+	a{
+		text-decoration: none;
+		color: white;
+		cursor: pointer;
+	}
+	a:hover{
+		text-decoration: underline;
+		cursor:pointer;
+		transition: all 1s;
+	}
+</style>
+<span>Link : </span><input type="input" name="input" id="input">
+<button onclick="caller()">Download</button>
+<br>
+<br>
+<span style="font-size: 15px; text-decoration: underline;">The Link will be down below .</span>
+<br>
+<a href="" id="link" download=""></a>
+</body>
+</html>
